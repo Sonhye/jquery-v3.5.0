@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 객체 조작 매서드</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+    $(function(){
+        var result_1 = $("#chk1").prop("checked")
+        console.log(result_1);
+
+        var result_2 = $("#chk2").prop("checked");
+        console.log(result_2);
+
+        var result_2 = $("#chk3").prop("checked",true);
+
+        var result_3 = $("se_1").prop("selectedIndex");
+        console.log(result_3);
+    });
+    </script>
+</head>
+<body>
+    <h1>객체 조작 매서드</h1>
+    <h2>p.225</h2>
+    <p>prop()매서드는 선택한 폼요소의 상태의 속성값을 가져오거나 새롭게 설정할수있습니다. 그리고 선택한 요소의 태그명, 노드 타입,  선택상자의 선택된 옵션의 인덱스 값도 알수있음</p>
+    <p>val() 메서드는 선택한 폼의 value 속성값만 가져오거나 새값을 설정할수있읍</p>
+    <h3>예시</h3>
+    <form action="#">
+        <fieldset>
+            <legend>객체 조작 및 생성</legend>
+            <ul>
+                <li>
+                    <input type="checkbox" name="chk1" id="chk1">
+                    <label for="chk1">chk1</label>
+                    <input type="checkbox" name="chk2" id="chk2">
+                    <label for="chk1">chk1</label>
+                    <input type="checkbox" name="chk3" id="chk3">
+                    <label for="chk1">chk1</label>
+                </li>
+            </ul>
+            <ul>
+                <select name="se_1" id="se_1">
+                    <option value="opt1">option1</option>
+                    <option value="opt2">option2</option>
+                    <option value="opt3" selected>option1</option>
+                </select>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>
