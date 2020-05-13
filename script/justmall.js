@@ -4,12 +4,13 @@ $(function(){
 });
 function tabs(){ // tabs 기능 정의
     $(".board_title li").click(function(){
-        if(!$(this).hasClass("on")) {
-            $("#gallery").css("display","block");
-        } else {
-            $("#gallery").css("display","none");
+        //console.log("클릭한 LI : "+$(this).index());
+        if(!$(this).hasClass("on")){
+            $(this).siblings().removeClass("on");
+            $(this).addClass("on");
+            $("#gallery").toggleClass("hide");
         }
-    });        
+    });  
 }
 function popup(){ // popup 기능 정의
     popup_open();

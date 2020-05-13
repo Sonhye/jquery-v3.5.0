@@ -26,26 +26,26 @@
     <p>prop()매서드는 선택한 폼요소의 상태의 속성값을 가져오거나 새롭게 설정할수있습니다. 그리고 선택한 요소의 태그명, 노드 타입,  선택상자의 선택된 옵션의 인덱스 값도 알수있음</p>
     <p>val() 메서드는 선택한 폼의 value 속성값만 가져오거나 새값을 설정할수있읍</p>
     <h3>예시</h3>
-    <form action="#">
+    <form action="#" id="form_1">
         <fieldset>
             <legend>객체 조작 및 생성</legend>
             <ul>
                 <li>
                     <input type="checkbox" name="chk1" id="chk1">
                     <label for="chk1">chk1</label>
-                    <input type="checkbox" name="chk2" id="chk2">
-                    <label for="chk1">chk1</label>
+                    <input type="checkbox" name="chk2" id="chk2" checked>
+                    <label for="chk1">chk2</label>
                     <input type="checkbox" name="chk3" id="chk3">
-                    <label for="chk1">chk1</label>
+                    <label for="chk1">chk3</label>
                 </li>
             </ul>
-            <ul>
+            <div>
                 <select name="se_1" id="se_1">
                     <option value="opt1">option1</option>
                     <option value="opt2">option2</option>
-                    <option value="opt3" selected>option1</option>
+                    <option value="opt3" selected>option3</option>
                 </select>
-            </ul>
+            </div>
         </fieldset>
     </form>
 </body>

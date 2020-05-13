@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수치조작 매서드</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box_wrap{
+            width: 300px;
+            height: 200px;
+            margin: 50px auto 0;
+            position: relative;
+            background-color: #ccc;
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 100px;
+            top: 50px;
+            background: red;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function(){
+        var $txt1 = $(".txt_1 span"),
+        var $txt2 = $(".txt_2 span"),
+        $box = $(".box");
+
+        var off_t = $box.offset().top;
+        var pos_t = $box.position().top;
+
+        $txt1.text(off_t);
+        $txt2.text(pos_t);
+    });
+    </script>
+</head>
+<body>
+    <h1>요소위치 매서드</h1>
+    <h2>p.230</h2>
+    <p>요소위치 매서드는 position</p>
+    <h2>예시</h2>
+    <div id="box_wrap">
+        <p class="box">박스</p>
+    </div>
+    <p class="txt_1">절대 top 위치값</p><span></span></p>
+</body>
+</html>
